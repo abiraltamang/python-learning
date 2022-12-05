@@ -123,20 +123,32 @@ add_np()
 
 
 
-def prime_number_checker():
-    try:
-        num= input("Enter the number to check if it is prime : ")
-        a=int(num)
-        for i in range(2,a//2+1):
-                if a%i==0:
-                    print("NUmber is composite")
-                    break
-        else:
-            print("Number is prime")           
-    except Exception as e:
-        print("Invalid entry", e)
+# def prime_number_checker():
+#     try:
+#         num= input("Enter the number to check if it is prime : ")
+#         a=int(num)
+#         for i in range(2,a//2+1):
+#                 if a%i==0:
+#                     print("NUmber is composite")
+#                     break
+#         else:
+#             print("Number is prime")           
+#     except Exception as e:
+#         print("Invalid entry", e)
 
 
-prime_number_checker()
-
+days = [
+    'What is  area of Nepal?',
+    'What is height of mount everest?',
+    'What is the first prime minister of Nepal?',
+    'Ehat is the population  of nepal?',
+    "First nepali movie is "
+]
+options = [
+    ('147181 sqkm', '161456 sqkm','141281 sqkm','246765 sqkm'),
+    ('8848', '4474', '8490', '9984'),
+    ('Bhimsen Thapa', 'Ram Baran Yadav', 'Jalnath Khanal', 'KP oli'),
+    ('lots of', 'lots  of lots ', 'low', 'moderate'),
+    ('Aama', "Bagh", "Sungur Muskurayo", 'Haan Bdr Jilke')
+]
 
