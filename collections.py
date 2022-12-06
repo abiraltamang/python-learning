@@ -167,7 +167,7 @@ def show(n):
     choice = input("Enter a/b/c/d : ")
     global score
     # if choice !='a' or choice !='b' or choice != 'c' or choice!='d':
-    if choice not in ['a', 'b', 'c','d']:
+    while choice not in ['a', 'b', 'c','d']:
         print('Invalid selection')
         choice = input("Enter a/b/c/d : ")
 
