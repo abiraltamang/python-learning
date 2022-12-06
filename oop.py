@@ -63,19 +63,20 @@ class User:
     def register(self):
         pass
     
-    @staticmethod
-    def view():
+    def view(self):
         pass
     
-    def login():
+    def login(self):
         pass
 
-    def search():
+    def search(self):
         pass
 
-    def update():
+    def update(self):
         pass
 
-    def delete():
+    def delete(self):
         pass 
 
+
+us
