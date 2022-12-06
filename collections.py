@@ -50,7 +50,7 @@ e={'key1':{},'key2':{},'key3':{},'key4':{}}
 f={'key1':[],'key2':[],'key3':[],'key4':[]}
 f={'key1':(),'key2':(),'key3':(),'key4':()}
 '''
-
+'''
 student_info_collection ={
     '12001':{
         'name':'Abiral BLon',
@@ -68,12 +68,13 @@ student_info_collection ={
         'phone':985421452
     }
 }
+'''
 
 # for i in student_info_collection:
 #     print(student_info_collection[i]['name'])
 
 
-days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+#days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
 '''n=int(input('Enter a number:'))
 if n<8 and n>0:
     print(days[n-1])
@@ -137,12 +138,12 @@ add_np()
 #         print("Invalid entry", e)
 
 
-days = [
+questions = [
     'What is  area of Nepal?',
     'What is height of mount everest?',
     'What is the first prime minister of Nepal?',
     'Ehat is the population  of nepal?',
-    "First nepali movie is "
+    "First nepali movie is :"
 ]
 options = [
     ('147181 sqkm', '161456 sqkm','141281 sqkm','246765 sqkm'),
@@ -152,12 +153,28 @@ options = [
     ('Aama', "Bagh", "Sungur Muskurayo", 'Haan Bdr Jilke')
 ]
 
+answers = ['a','a','a', 'd','a']
+# answers = ['147181 sqkm','8848','Bhimsen Thapa', 'moderate','Aama']
+
+score = 0
 
 def show(n):
-    print('a. ', options[n][1])
-    print('b. ', options[n][2])
-    print('c. ', options[n][3])
-    print('d. ', options[n][4])
-    a=input("Enter to see Next")
+    print(questions[4])
+    print('a. ', options[n][0])
+    print('b. ', options[n][1])
+    print('c. ', options[n][2])
+    print('d. ', options[n][3])
+    choice = input("Enter a/b/c/d : ")
+    global score
+    # if choice !='a' or choice !='b' or choice != 'c' or choice!='d':
+    if choice not in ['a', 'b', 'c','d']:
+        print('Invalid selection')
+        choice = input("Enter a/b/c/d : ")
 
-show(0)
+    if(choice == answers[n]):
+        score += 1
+
+for i in range(len(questions)):
+    show(i)
+
+print("Your score is : ",score)
