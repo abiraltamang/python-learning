@@ -39,6 +39,7 @@ Online Job Portal
     Job
         title detail requirement salary company vacancy_no category
         register(), update(), view(), login(), delete()
+    Jobseeker
     Application
         user job
 
@@ -46,12 +47,16 @@ Online shopping (E-commerce)
     User
         name, mobile, username, password, image, cv,type, status
         register(), update(), view(), login(), delete()
+    Customer 
+    Seller    
     Product
         name price details stock featuresn category brand types
         add(),view(), update(), delete()
+    Order
+        user product date
 
 '''
-
+'''
 class User:
     full_name= ''
     mobile= ''
@@ -80,3 +85,59 @@ class User:
 
 
 us
+'''
+
+
+class Animal:
+    # __color='' #private
+    # __height='' #protected
+    # __weight=''
+
+    # def __init__(self):
+    #     self.color = ''
+    #     self.height = ''
+    #     self.weight = ''
+
+
+    def __init__(self, color, height, weight):
+        self.__color = color
+        self.__height =height
+        self.__weight = weight
+
+    #setters & getters
+    def setColor(self, value):
+        self.__color = value
+   
+    def getColor(self, value):
+        return self.__color
+
+    def move(self):
+
+        print('It moves')
+
+
+
+
+# animal = Animal()
+# animal.move()
+# animal.weight = "4ft"
+
+
+class Dog(Animal):
+    def __init__(self, color, height, weight, food):
+        self.food = food
+        super().__init__(color, height, weight)
+
+class Crocodile(Animal):
+    pass
+
+class Bird(Animal):
+    pass
+
+
+dog = Dog('white', '2ft', '10kg','abc')
+print(dog)
+
+
+
+s
