@@ -20,10 +20,10 @@
       <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
       <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
     </ul>
-
+<!-- 
     <div>
       <img src="/assets/image.jpg" height="500" alt="nature image" />
-    </div>
+    </div> -->
 
     <!-- 
     <ol>
@@ -269,7 +269,7 @@
         <h1>User Registration</h1>
         <div>
           <label for="name">Name :</label>
-          <input name="fullname" type="text" id="name" required />
+          <input name="fullname" type="text" id="name" placeholder="Enter name" required />
         </div>
         <div>
           <label for="name">Email :</label>
@@ -293,6 +293,20 @@
           <label for="other">Other</label>
         </div>
         <div>
+          <label for="province">Province</label>
+          <select name="province" id="province">
+            <option >Select province</option>
+            <option value="Province1">Province 1</option>
+            <option value="Province2">Province 2</option>
+            <option value="Province3">Province 3</option>
+            <option value="Province4">Province 4</option>
+            <option value="Province5">Province 5</option>
+            <option value="Province6">Province 6</option>
+            <option value="Province7">Province 7</option>
+          </select>
+        </div>
+
+        <div>
           <label for="range">Range:</label>
           <input type="range" id="range" />
         </div>
@@ -301,7 +315,7 @@
           <input type="file" name="photo" />
         </div>
         <div>
-          <input type="submit" value="Register" />
+          <input clas type="submit" value="Register" />
           <button type="submit">Click</button>
           <button type="reset">Reset</button>
         </div>

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    width: 90%;
+    margin: 0 auto;
+}
+/* header css */
+header{
+    width: 100%;
+    height: 50px;
+}
+header .header-content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* navbar css  */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.navbar-content-1{
+    display: flex;
+    align-items: center;
+    
+}
+nav ul{
+    margin-left:3rem ;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+}
+nav ul li a{
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.join-button{
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 24px;
+    background-color: #FF6E31;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.join-button:hover{
+    background-color: #e77d4f;
+}
+
+/* slider css */
+
+#slider{
+    width: 100%;
+    background-color: rgb(83, 87, 111);
+}
+
+.carousel-item img{
+    height: 600px;
+    object-fit: cover;
+}
+.carousel-caption {
+    background-color: #4A8296;
+    
+}
+
+/* display css */
+#display{
+    margin: 2rem 0;
+}
+#display h2 {
+    text-align: center;
+
+}
+.display-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
