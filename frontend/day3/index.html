@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOrm JS</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+    <form  name="login-form">
+        <h3>User Registration</h3>
+        <p>
+            <label for="usename">UserName :</label>
+            <input type="text" name="username" placeholder="Username" />
+        </p>
+       
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password" />
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Login" onclick="onSubmit()">
+        </p>
+    </form>
+    
+    <form  name="add-numbers">
+        <p>
+            <label for="num1">Enter number 1 :</label>
+            <input type="text" id="num1" name="num1" value="4" >
+        </p>
+        <p>
+                <label for="">Enter operator : </label>
+                <label ><input type="radio" name="op" value="+">+</label>
+                <label ><input type="radio" name="op" value="-">-</label>
+                <label ><input type="radio" name="op" value="/">/</label>
+                <label ><input type="radio" name="op" value="*">*</label>
+        </p>
+        <p>
+            <label for="num2">Enter  number 2 :</label>
+            <input type="text" id="num2" name="num2">
+        </p>
+        <p>
+            <input type="button" value="Calculate" onclick="addNumber()">
+        </p>
+        <p>
+            <input type="button" value="Generate" onclick="multiplicationTableGenerator()">
+        </p>
+        <p id="output"></p>
+        <p>Result:  <span id="result"></span></p>
+       
+    </form>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>JavaScript</title>
+		<meta charset="UTF-8" />
+	</head>
+	
+	<body>
+		
+		<div id="main">
+			<p id="qn"></p>
+			<form id="opt-form"></form>
+			<button type="button" onclick="prev()">Back </button>
+			<button type="button" onclick="next()">Next </button>
+			<button type="button" onclick="result()">Result </button>
+            <p id="answer"></p>
+		</div>
+		
+		<script>
+			questions = [
+			'What is area of Nepal?', 
+			'What is the height of mount everest?', 
+			'Who is first prime minister of nepal?', 
+			'Pupulation of Nepal is:', 
+			'First Nepali Movie is:'
+			];
+
+			options = [
+			['147181 sq km', '181147 sq km', '174818 sq km', '247181 sq km'],
+			['7747 m', '7848 m', '8848 m', '4484 m'],
+			['BP Koirala', 'Bhimsen Thapa', 'Kalu Pandey', 'Manmohan Adhikari'],
+			['39178900', '29178900', '49178900', '19178900'],
+			['Deuta', 'Xyz', 'Abc', 'Aama']
+			];
+
+			answers = ['147181 sq km', '8848 m', 'Bhimsen Thapa', '19178900', 'Aama'];
+			choices=[];
+			qn_no = 0;
+            score=0;
+			
+
+			function show()
+			{
+				document.getElementById('qn').innerHTML = questions[qn_no];
+				document.getElementById('opt-form').innerHTML = 
+                '<label>'+'<input type="radio" name="answer" value="'+options[qn_no][0]+'" />'+ options[qn_no][0] +'</label></br>'+
+                '<label>'+'<input type="radio" name="answer" value="'+options[qn_no][1]+'" />'+ options[qn_no][1] +'</label></br>'+
+                '<label>'+'<input type="radio" name="answer" value="'+options[qn_no][2]+'" />'+ options[qn_no][2] +'</label></br>'+
+                '<label>'+'<input type="radio" name="answer" value="'+options[qn_no][3]+'" />'+ options[qn_no][3] +'</label></br>';
+
+                opts = document.getElementsByName('answer');
+                for(i=0;i<opts;i++){
+                    if(opts[i].value == choices[qn_no]){
+                        opts[i].checked=true;
+                    }
+                }
+			}
+			
+            function next(){
+                console.log(document.forms['opt-form']['answer'].value)
+                choices[qn_no] = document.forms['opt-form']['answer'].value;
+                var ans = document.forms['opt-form']['answer'].value; 
+                /*
+                opts=document.getElementsByName('answer');
+                for(i=0;i<opts;i++){
+                    if(opts[i].checked){
+                        ans=opts[i].value
+                    }
+
+                }
+                */
+               if(ans == answers[qn_no]){
+                    score++;
+               }
+               if(questions.length - 1 > qn_no){
+                   qn_no++;
+                    show();
+                }
+                else{
+                    alert("Your score is : "+ score)
+                }
+            }
+            function prev(){
+                choices[qn_no]= document.forms['opt-form']['answer'].value;
+                if(qn_no >=1){
+                    qn_no--;
+                    show();
+                }
+            }
+            function result(){
+                choices[qn_no] = document.forms['opt-form']['name'].value;
+            }
+            show()
+
+            console.log(choices)
+
+		</script>
+		
+	</body>
+</html>
